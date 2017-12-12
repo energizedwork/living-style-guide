@@ -1,0 +1,9 @@
+import Component from "@ember/component";
+
+const ComponentExample = Component.extend({});
+
+ComponentExample.reopenClass({
+    positionalParams: ["blueprint"]
+});
+
+export default ComponentExample;

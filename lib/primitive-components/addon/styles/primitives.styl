@@ -1,0 +1,154 @@
+json("./typography.json")
+
+// GRID
+@import 's-grid-settings'
+
+base-font-size = baseUnitSize * 2
+gutter = baseUnitSize * 4
+columns = 12
+gridClassName = 'ew-grid'
+cellClassName = 'ew-grid-cell'
+
+breakpoints = {
+    sm: 0,
+    md: 360px,
+    lg: 960px,
+    xlg: 1024px,
+    xxlg: 1440px
+}
+
+@import 's-grid-functions'
+@import 's-grid-classes'
+
+.ew-grid-container
+    padding 0 (gutter / 2)
+
+.ew-grid-cell
+    margin-top 0
+    margin-bottom 0
+
+
+// Box
+
+.primitive-box
+    display flex
+    flex-direction column
+    box-sizing border-box
+    padding 0
+    margin 0
+    list-style none
+
+// SPACING
+
+sizes = {
+    XXS: 0.25rem,
+    XS: 0.5rem,
+    S: 0.75rem,
+    M: 1rem,
+    L: 2rem,
+    XL: 3rem,
+    XXL: 4.5rem
+}
+
+for size in sizes
+    .padding-v-{size}
+        padding-top sizes[size]
+    .padding-v-{size}
+        padding-bottom sizes[size]
+    .spacing-{size}
+        > *:not(:first-child)
+            margin-top sizes[size]
+
+
+sizeableProperties = "width", "height", "padding", "padding-top","margin", "margin-left", "margin-top", "margin-bottom", "border-width", "border-bottom-width"
+
+for size in sizes
+    for prop in sizeableProperties
+        .{prop}-{size}
+            {prop} sizes[size]
+
+// TYPOGRAPHY
+
+body
+.text-body
+.text-menu
+.text-button
+    font-size 1rem
+    font-family bodyFontFamily
+    line-height 1.5
+
+.text-caption
+    font-size 0.75rem
+    font-family bodyFontFamily
+    text-transform uppercase
+    line-height 1.5
+
+.text-subhead
+    font-size 1rem
+    font-family headingFontFamily
+    text-transform uppercase
+    font-weight bold
+    line-height 1.5
+
+.text-title
+    font-size 1.5rem
+    font-family headingFontFamily
+    line-height 1.5
+
+.text-headline
+    font-size 1.5rem
+    font-family headingFontFamily
+    font-weight bold
+    line-height 1.5
+
+.text-display-1
+    font-size 2rem
+    font-family headingFontFamily
+    font-weight bold
+    line-height 1.5
+
+.text-display-2
+    font-size 3rem
+    font-family headingFontFamily
+    font-weight bold
+    text-transform uppercase
+    line-height 1.5
+
+.text-display-3
+    font-size 4.5rem
+    font-family headingFontFamily
+    font-weight bold
+    text-transform uppercase
+    line-height 1.5
+
+.text-display-4
+    font-size 7rem
+    font-family headingFontFamily
+    font-weight bold
+    text-transform uppercase
+    line-height 1.25
+
+.text-color-light
+    color grey
+
+
+// Colors
+
+colors = {
+    BRAND: #de0070,
+    OFF_BLACK: #2e2e38,
+    MID_GREY: #747479,
+    LIGHT_GREY: #cacad1,
+    OFF_WHITE: #fbfbfd
+}
+
+for color in colors
+    .bg-{color}
+    .background-color-{color}
+        background-color colors[color]
+
+    .border-bottom-color-{color}
+        border-bottom-color colors[color]
+
+    .color-{color}
+       color colors[color]

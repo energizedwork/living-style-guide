@@ -1,0 +1,12 @@
+{
+    "name": "primitive-components",
+    "keywords": ["ember-addon"],
+    "dependencies": {
+        "ember-cli-htmlbars": "*",
+        "ember-spread": "^3.0.1"
+    },
+    "devDependencies": {
+        "ember-cli-stylus": "^1.0.7",
+        "s-grid": "^1.2.1"
+    }
+}

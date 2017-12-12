@@ -7,6 +7,24 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('typography');
+  this.route('grid');
+  this.route('colours');
+  this.route('forms');
+  this.route('navigation');
+  this.route('button');
+  this.route('link');
+  this.route('layout');
+  this.route('primitive-components', function() {
+    this.route('box');
+    this.route('text');
+  });
+  this.route('composite-components', function() {
+    this.route('forms');
+    this.route('buttons');
+    this.route('links');
+    this.route('navigation');
+  });
 });
 
 export default Router;

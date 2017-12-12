@@ -1,0 +1,9 @@
+{{#if node.tagName}}
+    {{#if node.childNodes.length}}
+        {{#component node.tagName options=options}}
+            {{parse-primitive-list nodes=node.childNodes}}
+        {{/component}}
+    {{else}}
+        {{component node.tagName options=options}}
+    {{/if}}
+{{/if}}
