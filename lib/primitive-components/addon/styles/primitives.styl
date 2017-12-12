@@ -25,7 +25,6 @@ breakpoints = {
 
 .ew-grid-cell
     margin-top 0
-    margin-bottom 0
 
 
 // Box
@@ -60,8 +59,7 @@ for size in sizes
             margin-top sizes[size]
 
 
-sizeableProperties = "width", "height", "padding", "padding-top","margin", "margin-left", "margin-top", "margin-bottom", "border-width", "border-bottom-width"
-
+sizeableProperties = "width", "height", "padding", "padding-top", "padding-bottom", "padding-left","padding-right", "margin", "margin-left", "margin-top", "margin-bottom", "margin-right"
 for size in sizes
     for prop in sizeableProperties
         .{prop}-{size}
@@ -69,64 +67,72 @@ for size in sizes
 
 // TYPOGRAPHY
 
+p
+h1
+h2
+h3
+h4
+h5
+    margin-bottom 1rem
+
 body
 .text-body
 .text-menu
 .text-button
     font-size 1rem
     font-family bodyFontFamily
-    line-height 1.5
+    line-height 1.5rem
 
 .text-caption
     font-size 0.75rem
     font-family bodyFontFamily
     text-transform uppercase
-    line-height 1.5
+    line-height 1rem
 
 .text-subhead
     font-size 1rem
     font-family headingFontFamily
     text-transform uppercase
     font-weight bold
-    line-height 1.5
+    line-height 1.5rem
 
 .text-title
     font-size 1.5rem
     font-family headingFontFamily
-    line-height 1.5
+    line-height 2rem
 
 .text-headline
     font-size 1.5rem
     font-family headingFontFamily
     font-weight bold
-    line-height 1.5
+    line-height 2rem
 
 .text-display-1
     font-size 2rem
     font-family headingFontFamily
     font-weight bold
-    line-height 1.5
+    line-height 2.5rem
 
 .text-display-2
     font-size 3rem
     font-family headingFontFamily
     font-weight bold
     text-transform uppercase
-    line-height 1.5
+    line-height 4rem
 
 .text-display-3
     font-size 4.5rem
     font-family headingFontFamily
     font-weight bold
     text-transform uppercase
-    line-height 1.5
+    line-height 5.5rem
 
 .text-display-4
     font-size 7rem
     font-family headingFontFamily
     font-weight bold
     text-transform uppercase
-    line-height 1.25
+    line-height 8rem
 
 .text-color-light
     color grey
